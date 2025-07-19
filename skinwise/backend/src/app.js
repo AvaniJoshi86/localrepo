@@ -48,9 +48,10 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || '0.0.0.0';
 
-app.listen(PORT, () => {
-  console.log(`🚀 SkinWise Backend running on port ${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`🚀 SkinWise Backend running on http://${HOST}:${PORT}`);
 });
 
 module.exports = app;
